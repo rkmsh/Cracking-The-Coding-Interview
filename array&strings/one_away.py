@@ -30,24 +30,27 @@ def insert(first, sec):
     print("One_Insertion is satisfied.")
     return 0
 
+def main():
+    #Take the strings from the user
+    first = input("Enter the first string: ")
+    sec = input("Enter the second string: ")
 
-#Take the strings from the user
-first = input("Enter the first string: ")
-sec = input("Enter the second string: ")
+    #If the length of first string equals second string
+    #Then we call one_replace() method to check for replacement
+    if(len(first) == len(sec)):
+        one_replace(first, sec)
+    #If the length of the first string is less than second
+    #Then we call the insert() method to check for insertion
+    elif(len(first) + 1 == len(sec)):
+        insert(first, sec)
+    #If the length of the second string is less than first
+    #Then we call the insert() method to check for insertion
+    elif(len(first) - 1 == len(sec)):
+        insert(sec, first)
+    #If the above conditions are not satisfies by both the Strings
+    #Then we give a invalid message
+    else:
+        print("Invalid Strings!!!!!!")
 
-#If the length of first string equals second string
-#Then we call one_replace() method to check for replacement
-if(len(first) == len(sec)):
-    one_replace(first, sec)
-#If the length of the first string is less than second
-#Then we call the insert() method to check for insertion
-elif(len(first) + 1 == len(sec)):
-    insert(first, sec)
-#If the length of the second string is less than first
-#Then we call the insert() method to check for insertion
-elif(len(first) - 1 == len(sec)):
-    insert(sec, first)
-#If the above conditions are not satisfies by both the Strings
-#Then we give a invalid message
-else:
-    print("Invalid Strings!!!!!!")
+if __name__ == "__main__":
+    main()
