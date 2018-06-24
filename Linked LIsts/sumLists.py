@@ -102,18 +102,26 @@ class linkedList:
 def main():
     lst = linkedList()
 
+    # Calling the append_1() method to add data to the First Linked List
     lst1 = lst.append_1(7)
     lst1 = lst.append_1(1)
     lst1 = lst.append_1(6)
+    # Calling the display() method on the First List to display it.
     lst.display(lst1)
 
+    # Calling the append_2() method to add data to the Second Linked List
     lst2 = lst.append_2(5)
     lst2 = lst.append_2(9)
     lst2 = lst.append_2(2)
+    # Calling the display() method on the Second List to display it.
     lst.display(lst2)
 
+    # Calling the sumList() method to add the numbers and return the sum
+    # in Linked List
     lstr = lst.sumList(lst1,lst2,0)
+    # Calling the display() method on the Result to display it.
     lst.display(lstr)
 
+# Calling the main() function
 if __name__ == "__main__":
     main()
